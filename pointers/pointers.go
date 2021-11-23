@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func main() {
+func fn() {
 	datoOriginal := 1
 	otroDato := 3
 	fmt.Println(datoOriginal)
