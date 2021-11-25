@@ -5,7 +5,7 @@ import "fmt"
 func ejemploDeArreglos() {
 	var a [2]string
 
-	a[1] = "Hello" // a posición 0 mete el valor "Hello"
+	a[0] = "Hello" // a posición 0 mete el valor "Hello"
 	a[1] = "World" // a posición 1 mete el valor "World"
 
 	fmt.Println(a[0])
