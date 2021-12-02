@@ -55,5 +55,9 @@ func main() {
 	arregloAnimales[0] = aguila
 	arregloAnimales[1] = animalEspiritual
 
-	fmt.Println(arregloAnimales)
+	for i := 0; i < 2; i++ {
+		fmt.Println(sum2)
+	}
+
+	//fmt.Println(arregloAnimales)
 }

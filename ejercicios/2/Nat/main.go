@@ -49,6 +49,9 @@ func main() {
 
 	arregloscorto := [2]Animal{animalfavorito, animal2}
 
+	for i := 0; i < 2; i++ {
+		fmt.Printf(animal)
+	}
 }
 
 func imprimir(bonjour string) {

@@ -1,5 +1,7 @@
 package main
 
+import "fmt"
+
 var texto string
 var num int
 var booleano bool
@@ -26,6 +28,20 @@ func main() {
 		Patas:    4,
 		Mamifero: true,
 		Hermoso:  true,
+	}
+
+	animal2 := Animal{
+		Nombre:   "Gato",
+		Ojos:     2,
+		Patas:    4,
+		Mamifero: true,
+		Hermoso:  false,
+	}
+
+	arregloAnimales := [2]Animal{animalfavorito, animal2}
+
+	for i := 0; i < 2; i++ {
+		fmt.Println(arregloAnimales[i].Nombre)
 	}
 
 }
