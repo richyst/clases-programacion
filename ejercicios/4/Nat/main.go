@@ -46,6 +46,9 @@ func promedio(arreglo []int) int {
 func copiarArreglo(arreglo []int) []int {
 	nuevoArreglo := []int{} // NO MODIFICAR ESTA LINEA
 
+	for i := 0; i < len(arreglo); i++ {
+		nuevoArreglo[i] = arreglo[i]
+	}
 	return nuevoArreglo // NO MODIFICAR ESTA LINEA
 }
 
@@ -66,9 +69,9 @@ func main() {
 
 	// recorrerArreglo(arreglo)
 	// imprimirImpares(arreglo)
-	imprimirEnReversa(arreglo)
-	fmt.Println(promedio(arreglo))
+	// imprimirEnReversa(arreglo)
+	// fmt.Println(promedio(arreglo))
 	fmt.Println(copiarArreglo(arreglo))
-	fmt.Println(encontrarElMayor(arreglo))
-	fmt.Println(encontrarRepetidos(arreglo))
+	// fmt.Println(encontrarElMayor(arreglo))
+	// fmt.Println(encontrarRepetidos(arreglo))
 }
