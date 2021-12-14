@@ -55,14 +55,59 @@ func encontrarRepetidos(arreglo []int) []int {
 	return []int{}
 }
 
+// {1 ,  2,  3,  4,  5}
+// {5 ,  6,  7,  8,  9}
+// {11, 12, 13, 14, 15}
+// {16, 17, 18, 19, 20}
+// {21, 22, 23, 24, 25}
+func imprimirArregloBi(arreglo [][]int) {
+	for i := 0; i < len(arreglo); i++ {
+		//1 : i = 0
+		for j := 0; j < len(arreglo[i]); j++ {
+			//1 : i=0, j = 0
+			//2 : i = 0, j = 1
+			//3 : i = 0, j = 2
+			//4 : i = 0, j = 3
+			//5 : i = 0, j = 4
+			fmt.Println(arreglo[i][j]) // 1: 1
+		}
+		fmt.Println("Fin del for de j")
+	}
+	fmt.Println("Fin del for de i")
+}
+
+func imprimirEstudiantes(escuela [][]string) {
+	for i := 0; i < len(escuela); i++ { // itera cada salon de la escuela
+		for j := 0; j < len(escuela[i]); j++ { // itera cada estudiante de cada salón de la escuela
+			fmt.Println(escuela[i][j])
+		}
+	}
+
+}
+
 func main() {
-	arreglo := []int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
+	// arreglo := []int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
+	// arreglo_bi := [][]int{{1, 2, 3, 4, 5}, {5, 6, 7, 8, 9, 10}, {11, 12, 13, 14, 15}, {16, 17, 18, 19, 20}, {21, 22, 23, 24, 25}}
+	madrid := [][]string{
+		{"George", "nat", "Rich"},
+		{"Deya", "Jime", "Dam"},
+		{"Luis", "Jan", "Raquel"},
+	}
+	olinca := [][]string{
+		{"Deya", "Jime", "Dam"},
+		{"George", "nat", "Rich"},
+		{"Luis", "Jan", "Raquel"},
+	}
+
+	imprimirEstudiantes(madrid)
+	imprimirEstudiantes(olinca)
+
 	// var arreglo []int = []int{1,2,3,4,5,6,7,8,9,10}
 	// recorrerArreglo(arreglo)
 	// imprimirImpares(arreglo)
 	// imprimirEnReversa(arreglo)
 	// fmt.Println(promedio(arreglo))
-	fmt.Println(copiarArreglo(arreglo))
+	// fmt.Println(copiarArreglo(arreglo))
 	// fmt.Println(encontrarElMayor(arreglo))
 	// fmt.Println(encontrarRepetidos(arreglo))
 }

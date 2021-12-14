@@ -10,7 +10,7 @@ func recorrerArreglo(arreglo []int) {
 
 	}
 	
-     }
+}
 recorrerArregl =	// RESULTADO ESPERADO: 1, 3, 5, 7, 9
 func imprimirImpares(arreglo []int) {
 
@@ -47,14 +47,50 @@ func encontrarRepetidos(arreglo []int) []int {
 
 func main() {
 
-	arreglo := []int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
+	// arreglo := []int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
 
+	arreglo_bi := [][]int{{1, 2, 3, 4, 5}, {5, 6, 7, 8, 9, 10}, {11, 12, 13, 14, 15}, {16, 17, 18, 19, 20}, {21, 22, 23, 24, 25}}
 	//fmt.Printl](arreglo)
-	recorrerArreglo(arreglo)
-	// imprimirImpares(arreglo)
-	// imprimirEnReversa(arreglo)
-	fmt.Println(promedio(arreglo))
-	fmt.Println(copiarArreglo(arreglo))
-	fmt.Println(encontrarElMayor(arreglo))
-	fmt.Println(encontrarRepetidos(arreglo))
+	// recorrerArreglo(arreglo)
+	// // imprimirImpares(arreglo)
+	// // imprimirEnReversa(arreglo)
+	// fmt.Println(promedio(arreglo))
+	// fmt.Println(copiarArreglo(arreglo))
+	// fmt.Println(encontrarElMayor(arreglo))
+	// fmt.Println(encontrarRepetidos(arreglo))
 }
+
+
+{1 ,  2,  3,  4,  5} 
+{5 ,  6,  7,  8,  9} 
+{11, 12, 13, 14, 15} 
+{16, 17, 18, 19, 20} 
+{21, 22, 23, 24, 25}
+
+1)
+1
+2
+3
+4
+5
+5
+6
+7
+8
+9
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+
+2) inciso 1 pero en reversa
+
+3) 1, 6, 13, 19, 25
+
