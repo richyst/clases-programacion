@@ -52,7 +52,31 @@ func encontrarElMayor(arreglo []int) int {
 
 // RESULTADO ESPERADO: []int{}
 func encontrarRepetidos(arreglo []int) []int {
-	return []int{}
+
+	// recorreremos el "arreglo" ✅
+	// - agarrar el elemento en la posición "i" del arreglo (nunca se debe hacer con la ultima posición)
+	// - - ese elemento lo debes comparar contra todos los elementos que le siguen
+	// - - si encuentras uno repetido -> lo guardas en el arreglo "numerosRepetidos"
+	// regresas el arreglo "numerosRepetidos"
+
+	numerosRepetidos := []int{}
+
+	for i := 0; i < len(arreglo); i++ { // voy a recorrer arreglo
+
+		// repetidos := arreglo[i]
+		// fmt.Println(i)
+		for j := i; j < len(arreglo); j++ {
+			// if numerosRepetidos ==
+			numeroRepetidos = append(numerosRepetidos, repetidos)
+			fmt.Println("num; ", arreglo[i], " vs num: ", arreglo[j])
+		}
+		// if numerosRepetidos == arreglo[i]{
+		// 	numerosRepetidos = arreglo[i]
+		// }
+
+	}
+
+	return numerosRepetidos
 }
 
 // {1 ,  2,  3,  4,  5}
@@ -62,13 +86,7 @@ func encontrarRepetidos(arreglo []int) []int {
 // {21, 22, 23, 24, 25}
 func imprimirArregloBi(arreglo [][]int) {
 	for i := 0; i < len(arreglo); i++ {
-		//1 : i = 0
 		for j := 0; j < len(arreglo[i]); j++ {
-			//1 : i=0, j = 0
-			//2 : i = 0, j = 1
-			//3 : i = 0, j = 2
-			//4 : i = 0, j = 3
-			//5 : i = 0, j = 4
 			fmt.Println(arreglo[i][j]) // 1: 1
 		}
 		fmt.Println("Fin del for de j")
@@ -77,30 +95,39 @@ func imprimirArregloBi(arreglo [][]int) {
 }
 
 func imprimirEstudiantes(escuela [][]string) {
+	// nombres := ""
 	for i := 0; i < len(escuela); i++ { // itera cada salon de la escuela
+		fmt.Printf("\n\nSalón %d = %v\n", i, escuela[i])
 		for j := 0; j < len(escuela[i]); j++ { // itera cada estudiante de cada salón de la escuela
-			fmt.Println(escuela[i][j])
+			fmt.Printf("Salon: %d, Alumno: %d = %s\n", i, j, escuela[i][j])
+			// nombres = fmt.Sprintf("%s\n%s", nombres, escuela[i][j])
 		}
 	}
-
+	// return nombres
 }
 
 func main() {
-	// arreglo := []int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
+	arreglo := []int{19, 22, 31, 45, 57, 16, 76, 81, 9, 10}
 	// arreglo_bi := [][]int{{1, 2, 3, 4, 5}, {5, 6, 7, 8, 9, 10}, {11, 12, 13, 14, 15}, {16, 17, 18, 19, 20}, {21, 22, 23, 24, 25}}
-	madrid := [][]string{
-		{"George", "nat", "Rich"},
-		{"Deya", "Jime", "Dam"},
-		{"Luis", "Jan", "Raquel"},
-	}
-	olinca := [][]string{
-		{"Deya", "Jime", "Dam"},
-		{"George", "nat", "Rich"},
-		{"Luis", "Jan", "Raquel"},
-	}
+	// madrid := [][]string{
+	// 	{"George", "nat", "Rich"}, // salon 0
+	// 	{"Deya", "Jime", "Dam"},   // salon 1
+	// 	{"Luis", "Jan", "Raquel"}, // salon 2
+	// }
+	// olinca := [][]string{ // escuelta
+	// 	{ // salon 0 de olinca
+	// 		"Deya", // estudiante 0 del salon 0 de olinca
+	// 		"Jime", // estudiante 1 del salon 0 de olinca
+	// 		"Dam",  // estudiante 2 del salon 0 de olinca
+	// 	},
+	// 	{"George", "nat", "Rich"}, // salon 1
+	// 	{"Luis", "Jan", "Raquel"}, // salon 2
+	// }
+	// sagrado := [][]string{}
 
-	imprimirEstudiantes(madrid)
-	imprimirEstudiantes(olinca)
+	// imprimirEstudiantes(madrid)
+	// imprimirEstudiantes(sagrado)
+	// imprimirEstudiantes(olinca)
 
 	// var arreglo []int = []int{1,2,3,4,5,6,7,8,9,10}
 	// recorrerArreglo(arreglo)
@@ -109,5 +136,5 @@ func main() {
 	// fmt.Println(promedio(arreglo))
 	// fmt.Println(copiarArreglo(arreglo))
 	// fmt.Println(encontrarElMayor(arreglo))
-	// fmt.Println(encontrarRepetidos(arreglo))
+	fmt.Println(encontrarRepetidos(arreglo))
 }
